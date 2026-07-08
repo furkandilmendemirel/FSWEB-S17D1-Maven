@@ -24,3 +24,22 @@ Proje sayımız ilerledikçe proje yönetimimizi kolaylaştırmak adına projele
 * [POST]/workintech/animal => ```integer id``` ve ```String name``` değerlerini alır ve animals mapine ekler.
 * [PUT]/workintech/animal/{id} => İlgili id deki map değerini ```Request Body``` içerisinden aldığı id değeri ile günceller.
 * [DELETE]/workintech/animal/{id} => İlgili id değerini mapten siler.
+
+
+
+### ⚠️ Skorun NextGen'e Kaydedilmediyse
+
+Eğer testleri çalıştırdığın halde skorun NextGen'e kaydedilmediyse, önce fork'unun güncel olup olmadığını kontrol et:
+
+1. GitHub reponu aç.
+2. Repo **X commit ahead** ve **X commits behind** şeklinde bir uyarı gösteriyorsa, branch'in güncel değildir.
+3. **Sync fork → Update branch** adımlarını uygula.
+4. Ardından localinde şu komutu çalıştır:
+
+```bash
+   git pull
+```
+
+5. Testleri tekrar çalıştır. Bu adımdan sonra skorun güncellenmiş olacaktır.
+
+> **Not:** Bu kontrolü yapmadan tekrar tekrar test çalıştırmak sorunu çözmez; sorunun kaynağı genellikle fork'un upstream repository ile senkron olmamasıdır.
